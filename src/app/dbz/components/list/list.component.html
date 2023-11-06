@@ -1,0 +1,17 @@
+<h4 class="font-bold">Listado</h4>
+<ul class="w-80" >
+  <li class="border-b-8" *ngFor="let person of charactersList;
+    let i = index; let isLast = last; let isEven = even; let isOdd = odd"
+    [ngClass]="{
+      'bg-green-500': isLast,
+      'bg-red-600': isEven
+    }">
+
+    {{ i + 1 }}
+    {{ person.name }} - {{ person.power }}
+
+
+
+  </li>
+
+</ul>
